@@ -1,1 +1,2 @@
-# Employee Payroll Tracker Starter Code
+# Employee Payroll Tracker
+This payroll tracker takes input from users and records employees names and salary info and displays in a table. It also calculates salary averages and selects random employees. the payroll of all the employees and the input we give it and 

@@ -1,24 +1,15 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-const first_Name = document.querySelector('#add-employee-btn')
-const last_Name = document.querySelector('#add-employee-btn')
-const salary = document.querySelector('#add-employee-btn')
 
-// Collect employee data
 // Collect employee data
 const collectEmployees = function() {
   const employees = []
   let moreEmployees = true;
 
   while (moreEmployees){
-    const first_name = prompt ('First Name');
-    const last_Name = prompt ('Last Name');
-    const salary = prompt ('Salary');
-    const namecharacters = ('abcdefghijklmnopqrstuvwxyz'.split(''));
-   if (namecharacters.includes(firstname, lastName)){
-      console.log('Please use letters only')
-    }
-    
+    const firstName = prompt ('First Name');
+    const lastName = prompt ('Last Name');
+    const salary = parseFloat(prompt ('Salary'));
   
 const employee = {firstName, lastName, salary};
 employees.push(employee);
@@ -26,7 +17,6 @@ moreEmployees = confirm('Would you like to add another employee?');
   }
 return employees
 }
-
   // TODO: Get user input to create and return an array of employee objects
 
 
@@ -35,13 +25,13 @@ const displayAverageSalary = function(employeesArray) {
   const totalSalary = employeesArray.reduce((sum, employee) => sum + employee.salary, 0);
   const averageSalary = totalSalary/employeesArray.length;
 
-  console.log(`Average Salary = `${averageSalary.toLocaleString("en-US", {
+  console.log(`Average Salary = ${averageSalary.toLocaleString("en-US", {
     style: "currency",
     currency: "USD"
-  })});
+  })}`);
 }
   // TODO: Calculate and display the average salary
-}
+
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   const randomIndex = Math.floor(Math.random() * employeesArray.length);
