@@ -9,7 +9,12 @@ const collectEmployees = function() {
   while (moreEmployees){
     const firstName = prompt ('First Name');
     const lastName = prompt ('Last Name');
-    const salary = parseFloat(prompt ('Salary'));
+    let salary = prompt ('Salary');
+
+    salary = parseInt(salary);
+        if (isNaN(salary)) {
+            salary = 0; // Set default salary to 0 if input is not a number
+        }
   
 const employee = {firstName, lastName, salary};
 employees.push(employee);
